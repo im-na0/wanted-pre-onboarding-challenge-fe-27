@@ -21,7 +21,7 @@ export function Header() {
         {/* 로그아웃 버튼 */}
         <div className="flex justify-end">
           <Button variant="outline" size="icon">
-            <LogOut />
+            <LogOut size={16} />
           </Button>
         </div>
       </div>

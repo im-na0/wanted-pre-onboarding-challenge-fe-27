@@ -9,6 +9,7 @@ export * from './ui/input';
 export * from './ui/textarea';
 export * from './ui/label';
 export * from './ui/select';
+export * from './ui/card';
 
 // ./api
 export * from './api/services/auth';

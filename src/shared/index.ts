@@ -10,6 +10,10 @@ export * from './ui/textarea';
 export * from './ui/label';
 export * from './ui/select';
 
+// ./api
+export * from './api/services/auth';
+export * from './api/services/todos';
+
 // ./lib
 export * from './lib/utils';
 

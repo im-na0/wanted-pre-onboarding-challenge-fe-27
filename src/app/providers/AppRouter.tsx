@@ -1,10 +1,15 @@
-import { SignInPage, SignUpPage, TodoPage } from "@/pages";
-import { routes } from "@/shared";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { SignInPage, SignUpPage, TodoPage } from '@/pages';
+import { Layout, routes } from '@/shared';
+import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
 
 const router = createBrowserRouter([
   {
     path: routes.root,
+    element: (
+      <Layout>
+        <Outlet />
+      </Layout>
+    ),
     children: [
       {
         index: true,

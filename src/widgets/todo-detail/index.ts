@@ -1,1 +1,1 @@
-export * from './ui/TodoDetailModal';
+export * from './ui/todo-detail-modal';

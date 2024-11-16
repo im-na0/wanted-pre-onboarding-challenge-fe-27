@@ -1,17 +1,22 @@
-import { instance } from "../instance";
-import type { ApiResponse } from "../types/common";
+import { instance } from '../instance';
+import type { ApiResponse } from '../types/common';
 import type {
   CreateTodoRequest,
   CreateTodoResponse,
+  GetTodosRequest,
   GetTodosResponse,
   Todo,
   UpdateTodoRequest,
   UpdateTodoResponse,
-} from "../types/todos";
+} from '../types/todos';
 
 export const TodoServices = {
-  getTodos: async () => {
-    const { data } = await instance.get<ApiResponse<Todo[]>>(`todos`).json();
+  getTodos: async (params: { data: GetTodosRequest }) => {
+    const { data } = await instance
+      .get<ApiResponse<Todo[]>>(`todos`, {
+        searchParams: params.data,
+      })
+      .json();
     return data;
   },
 
@@ -24,7 +29,7 @@ export const TodoServices = {
 
   createTodo: async (params: { data: CreateTodoRequest }) => {
     const { data } = await instance
-      .post<ApiResponse<CreateTodoResponse>>("todos", { json: params.data })
+      .post<ApiResponse<CreateTodoResponse>>('todos', { json: params.data })
       .json();
     return data;
   },

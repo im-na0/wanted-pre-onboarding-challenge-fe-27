@@ -1,6 +1,6 @@
 import { TodoCard } from '@/features/todos';
 import { Header } from '@/shared';
-import { AddTodoButton } from './AddTodoButton';
+import { AddTodoButton } from './add-todo-button';
 import { useState } from 'react';
 import { TodoDetailModal } from '@/widgets';
 
